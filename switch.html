@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+		function redChange()
+
+		{
+			var current=document.getElementById('btn').value
+			if(current=='red'){
+
+			document.getElementById('red').style.background="yellow";
+			document.getElementById('green').style.background="red";
+			
+			current=document.getElementById('btn').value="yellow"
+		}
+		else{
+			document.getElementById('green').style.background="yellow";
+			document.getElementById('red').style.background="red";
+			current=document.getElementById('btn').value="red"
+		}
+		
+		
+			
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="red" style="height: 200px; width:200px; background: red" >
+
+	</div>
+	<div  id="green" style="height: 200px; width: 200px; background-color: yellow">
+	</div><br>
+	<input type="button" id="btn" value="red" onclick="redChange();">
+	</body>
+</html>
