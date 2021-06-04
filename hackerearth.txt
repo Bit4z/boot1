@@ -1,0 +1,86 @@
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a[1000];
+    int b[1000];
+    int s[100000];
+     char *c[10]={"WS","MS","AS","AS","MS","WS"};
+    char *d[100000];
+    int n,j,k,p,m,x,r;
+    char *t[100000];
+    int y[100000],z[100000];
+    k=12;
+    j=1;
+    p=k;
+    m=6;
+    x=0;
+	n=108;
+  
+    int n1=(n/2);
+    for(int i=0;i<n1;i++)
+    {
+     if(m!=j)
+     {
+         a[i]=j;
+         b[i]=k;
+         d[i]=c[x];
+         x++;
+         j++;
+         k--;
+     }
+     else{
+         d[i]=c[x];
+         a[i]=j;
+         b[i]=k;
+         x=0;
+         j=p+1;
+         m=(j+6-1);
+         p=p+12;
+         k=p;
+     }
+    }
+
+   scanf("%d",&r);
+   for(int i=0;i<r;i++)
+   {
+       scanf("%d",&s[i]);
+   }
+    
+   
+    for(int j=0;j<r;j++)
+    {
+       for(int i=0;i<n1;i++)
+    {
+       
+  
+     if(s[j]==a[i]||s[j]==b[i])
+        {
+        y[j]=a[i];
+        z[j]=b[i];
+        t[j]=d[i];
+        }
+   
+      
+    }
+    }
+    for(int i=0;i<r;i++)
+    {
+      if(s[i]==y[i])
+        {
+            printf("%d",z[i]);
+            printf(" ");
+            printf("%s\n",t[i]);
+        }
+        else if(s[i]==z[i])
+        {
+            printf("%d",y[i]);
+             printf(" ");
+            printf("%s\n",t[i]);
+        }
+    }
+    return 0;
+    
+}
