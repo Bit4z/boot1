@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		 function TableNum()
+		{
+			var num=Number(document.getElementById('Num').value);
+			var num2=num;
+			
+			for(var i=1;i<=10;i++)
+			{
+				var tbl=num*i;
+				
+if(tbl%2==0)
+{ 
+	document.getElementById('ziya').innerHTML+=num+"X"+i+"="+tbl+"(Even)"+"<br>";
+	if(tbl==(num2*10))
+			
+					for(var j=1;j<=10;j++)
+					{
+						var num4=num2*j;
+						mul(num4);
+					}
+				}	
+}
+
+			else{
+
+			
+					{document.getElementById('ziya').innerHTML+=num+"X"+i+"="+tbl+"(Odd)"+"<br>";
+				if(tbl==(num2*10))
+			
+					for(var j=1;j<=10;j++)
+					{
+						var num3=num2*j;
+						mul(num3);
+					}
+				}
+
+			}
+			mul(tbl);
+			}
+		}
+	function mul(var n)
+	{
+document.getElementById('ziya1').innerHTML+=+n+"<br>";
+	}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+		<th>Enter the number</th>
+		<td><input type="number" placeholder="Enter the number" id="Num"></td><br>
+		<td>
+		<input type="button" Value="count" id="table" onclick="TableNum()">
+	</td>
+	</tr>
+	</table>
+	<p id="ziya"></p>
+	<p id="ziya1"></p>
+
+</body>
+</html>

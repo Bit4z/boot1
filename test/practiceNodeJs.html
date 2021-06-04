@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+	function add()
+	{
+		var N1=parseInt(document.getElementById("n1").value)
+		var N2=parseInt(document.getElementById("n2").value)
+
+		var N3=N1+N2;
+		
+		alert("The sum is:"+N3);
+	}
+</script>
+	</head>
+	<body>
+		<h1>sum is:
+			<h3 id="sum"></h3>
+		</h1>
+		
+		<table>
+			<tr>
+				<td>Enter First Number</td><br>
+				<td><input type="number" id="n1" placeholder="First Number"></td>
+			</tr>
+			<tr>
+				<td>Enter Second Number</td><br>
+				<td><input type="Number" id="n2" placeholder="Second Number"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+			<input type="button" value="sum" onclick="add();"><br>
+		</td>
+		</tr>
+		</table>
+
+
+	</body>
+	</html>
